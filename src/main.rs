@@ -29,5 +29,5 @@ Usage: ./main <output_file> <iteration> <x0> <x1> <y0> <y1> <img_width> <img_hei
 
     let execute = Seq;
     let image = execute.calculate(&setting);
-    draw_image(image);
+    draw_image(image, &setting);
 }
