@@ -1,8 +1,6 @@
 use std::env;
 
-mod seq;
-use seq::Seq;
-
+use mandelbrot_set::seq::Seq;
 use mandelbrot_set::utils::draw_image;
 use mandelbrot_set::{MandelbrotSet, Setting};
 

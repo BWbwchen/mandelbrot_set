@@ -1,10 +1,10 @@
-pub struct Seq;
+use crate::Image;
+use crate::MandelbrotSet;
+use crate::Setting;
 
-// use mandelbrot_set::calc_mandelbrot_set;
-use mandelbrot_set::core::calc_mandelbrot_set;
-use mandelbrot_set::Image;
-use mandelbrot_set::MandelbrotSet;
-use mandelbrot_set::Setting;
+use crate::core::calc_mandelbrot_set;
+
+pub struct Seq;
 
 impl MandelbrotSet for Seq {
     fn calculate(&self, setting: &Setting) -> Image {

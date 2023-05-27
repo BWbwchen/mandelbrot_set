@@ -1,6 +1,7 @@
 pub type Image = Vec<Vec<i32>>;
 
-pub mod core;
+mod core;
+pub mod seq;
 pub mod utils;
 
 #[derive(Debug)]
