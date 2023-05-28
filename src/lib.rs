@@ -1,6 +1,5 @@
 pub type Image = Vec<Vec<i32>>;
 
-mod core;
 pub mod seq;
 pub mod utils;
 
