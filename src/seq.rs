@@ -5,7 +5,7 @@ use crate::Setting;
 pub struct Seq;
 
 #[inline]
-fn calc_mandelbrot_set(y0: f64, x0: f64, iter_max: i32) -> i32 {
+pub(crate) fn calc_mandelbrot_set(y0: f64, x0: f64, iter_max: i32) -> i32 {
     let mut repeats = 0;
     let mut x = 0.0;
     let mut y = 0.0;
