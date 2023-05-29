@@ -7,3 +7,14 @@ edition = "2021"
 
 [dependencies]
 image = "0.24.6"
+
+[dev-dependencies]
+criterion = "0.5.1"
+
+[[bench]]
+name = "seq"
+harness = false
+
+[[bench]]
+name = "seq_sse2"
+harness = false
