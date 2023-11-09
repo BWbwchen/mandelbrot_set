@@ -1,9 +1,15 @@
 use std::env;
 
+#[allow(unused_imports)]
 use mandelbrot_set::seq::Seq;
 use mandelbrot_set::seq_sse2::SeqSse2;
 use mandelbrot_set::utils::draw_image;
 use mandelbrot_set::{MandelbrotSet, Setting};
+
+fn choose_method() -> Box<dyn MandelbrotSet> {
+    // Box::new(Seq)
+    Box::new(SeqSse2)
+}
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -26,8 +32,6 @@ Usage: ./main <output_file> <iteration> <x0> <x1> <y0> <y1> <img_width> <img_hei
     };
     dbg!(&setting);
 
-    let _execute = Seq;
-    let execute = SeqSse2;
-    let image = execute.calculate(&setting);
+    let image = choose_method().calculate(&setting);
     draw_image(image, &setting);
 }
