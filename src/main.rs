@@ -3,12 +3,14 @@ use std::env;
 #[allow(unused_imports)]
 use mandelbrot_set::seq::Seq;
 use mandelbrot_set::seq_sse2::SeqSse2;
+use mandelbrot_set::threadpool::ThreadPool;
 use mandelbrot_set::utils::draw_image;
 use mandelbrot_set::{MandelbrotSet, Setting};
 
 fn choose_method() -> Box<dyn MandelbrotSet> {
     // Box::new(Seq)
-    Box::new(SeqSse2)
+    // Box::new(SeqSse2)
+    Box::new(ThreadPool)
 }
 
 fn main() {

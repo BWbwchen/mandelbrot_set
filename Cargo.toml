@@ -7,6 +7,7 @@ edition = "2021"
 
 [dependencies]
 image = "0.24.6"
+threadpool = { git = "https://github.com/BWbwchen/threadpool.git" }
 
 [dev-dependencies]
 criterion = "0.5.1"
