@@ -22,8 +22,7 @@ impl MandelbrotSet for ThreadPool {
             let y0: f64 = j as f64
                 * ((setting.imag_upper - setting.imag_lower) / setting.img_height as f64)
                 + setting.imag_lower;
-            let row = unsafe { std::mem::transmute::<_, &'static mut Vec<i32>>(row) };
-            tp.spawn(move || {
+            tp.scope_spawn(move || {
                 for (i, v) in row.iter_mut().enumerate() {
                     let x0: f64 =
                         i as f64 * ((real_upper - real_lower) / img_width as f64) + real_lower;

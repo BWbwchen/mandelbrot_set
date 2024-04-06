@@ -704,7 +704,7 @@ dependencies = [
 [[package]]
 name = "threadpool"
 version = "0.1.0"
-source = "git+https://github.com/BWbwchen/threadpool.git#9b2283e30f9c78e1236d296b41bfcf6615435e6d"
+source = "git+https://github.com/BWbwchen/threadpool.git?rev=d563151c87e563b139cf8cbb6048c4eed75e183e#d563151c87e563b139cf8cbb6048c4eed75e183e"
 dependencies = [
  "env_logger",
  "log",
